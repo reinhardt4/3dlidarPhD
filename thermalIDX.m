@@ -45,19 +45,19 @@ end
 
 %% Apply inputs
 try
-% temporary indices
-Temp2 = 1:size(DFNUC_Thermal,3);
-% index array
-Temp3=repmat(Temp2,size(Temp1,3),1);
-% Preallocate memory before looping
-Temp5=zeros(size(Temp1,3),length(Temp2));
-for ii = Temp2
-    Temp4 = double(Temp1)-DFNUC_Thermal(:,:,ii);
-    Temp5(:,ii)=nanstd(nanstd(Temp4,[],2),[],1);
-end
-%Generate indices and reshape
-output = Temp3(Temp5==min(Temp5,[],2));
-output=reshape(output,size(Temp1,3),length(output)/size(Temp1,3));
+	% temporary indices
+	Temp2 = 1:size(DFNUC_Thermal,3);
+	% index array
+	Temp3=repmat(Temp2,size(Temp1,3),1);
+	% Preallocate memory before looping
+	Temp5=zeros(size(Temp1,3),length(Temp2));
+	for ii = Temp2
+	    Temp4 = double(Temp1)-DFNUC_Thermal(:,:,ii);
+	    Temp5(:,ii)=nanstd(nanstd(Temp4,[],2),[],1);
+	end
+	%Generate indices and reshape
+	output = Temp3(Temp5==min(Temp5,[],2));
+	output=reshape(output,size(Temp1,3),length(output)/size(Temp1,3));
 
 catch
 	%display specific warning messages and return (exit) from the function if an error is caught
