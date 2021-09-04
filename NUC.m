@@ -10,7 +10,8 @@
 %- refs. "Dark non-uniformity correction and characterization of a 3D flash lidar camera, AD Reinhardt, D Miller, A Lee, C Bradley, PF McManamon Laser Radar Technology and Applications XXIII 10636, 1063608" and 
 % "Thermal drift compensation in dark-frame non-uniformtiy correction for InGaAs PIN 3D flash lidar camera, AE Hecht, AD Reinhardt, C Bradley, PF McManamon Laser Radar Technology and Applications XXVI 11744, 117440B" and
 % "Toward snapshot correction of 3D flash LiDAR imagers, , A Reinhardt, CP Bradley, A Hecht, PF McManamon Optical Engineering 60 (8), 083101"
-
+%
+% output: ND-array fully corrected of DFNUC and PRNUC
 
 function output=NUC(input,DFNUC_Thermal,PRNUC)
 try
