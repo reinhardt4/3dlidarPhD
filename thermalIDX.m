@@ -11,8 +11,10 @@
 % "Evaluating and Correcting 3D Flash LiDAR Imagers, AD Reinhardt University of Dayton"
 % 5D arrays should have a structure of (x,y,frames,rotations,variations-in-intensity), refs. "Toward snapshot correction of 3D flash LiDAR imagers, A Reinhardt, CP Bradley, A Hecht, PF McManamon Optical Engineering 60 (8), 083101" and
 % "Evaluating and Correcting 3D Flash LiDAR Imagers, AD Reinhardt University of Dayton"
-% DFNUC_Thermal: thermal compensation lookup table, refs. "A Reinhardt, CP Bradley, A Hecht, PF McManamon Optical Engineering 60 (8), 083101" and 
+% DFNUC_Thermal: thermal compensation lookup table, refs. "Toward snapshot correction of 3D flash LiDAR imagers, A Reinhardt, CP Bradley, A Hecht, PF McManamon Optical Engineering 60 (8), 083101" and 
 % "Thermal drift compensation in dark-frame non-uniformtiy correction for InGaAs PIN 3D flash lidar camera, AE Hecht, AD Reinhardt, C Bradley, PF McManamon Laser Radar Technology and Applications XXVI 11744, 117440B"
+%
+% output: array of indices for thermal compensation of DFNUC
 
 function output=thermalIDX(input,DFNUC_Thermal)
 
